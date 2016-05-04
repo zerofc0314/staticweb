@@ -1,0 +1,14 @@
+//@charset"utf-8";
+//div,header,nav,p,h1,h2,h3,h4,h5,h6,section,ul,ol,dl,li,dt,dd,figure,figcaption,hgroup{
+  //  padding: 0px;
+    //margin: 0px;
+//}
+#containter{
+    width: 800px;
+    height: 4321px;
+    background:url("images/expert3.jpg") 0 0 repeat-y;  
+    border: black 2px solid;
+}
+ul{
+    border:red 1px solid;
+}

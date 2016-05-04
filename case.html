@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>我的主页</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/case.css" type="text/css" rel="stylesheet"/>
+        <link href="css/muma.css" rel="stylesheet" type="text/css" /> 
+        <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.roundabout-1.0.min.js"></script>
+       <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> 
+       <script language="javascript" type="text/javascript" src="js/public.js"></script>
+       <script type="text/javascript">	
+           $(function(){
+           $('.grager').mousedown(function(e){
+
+		// e.pageX
+		var positionDiv = $(this).offset();
+		var positionOuterDiv = $('.drag').offset();
+		var distenceX = e.pageX - positionDiv.left + positionOuterDiv.left;
+		
+		//alert(distenceX)
+		// alert(positionDiv.left);
+		
+
+
+		$(document).mousemove(function(e){
+			var x = e.pageX - distenceX;
+			
+			
+			if(x<0){
+				x=0;
+			}else if(x>$('.drag').width()-$('.grager').outerWidth(true)){
+				x = $('.drag').width()-$('.grager').outerWidth(true);
+			}
+
+			
+
+			$('.grager').css({
+				'left':x+'px'
+			});
+                        var percentage = x/($('.grager').width()-$('.drag').outerWidth(true));
+                        
+                        var dragWidth = $('.son').outerWidth(true)-$('.fuqin').width();
+                      
+                        $('.son').css('left',percentage*dragWidth);
+                        });
+                        
+                        $(document).mouseup(function(){
+			$(document).off('mousemove');
+		});
+            });
+        });
+           
+           
+        $(document).ready(function(){
+            $('.featured-area ul').roundabout({
+		easing: 'easeOutInCirc',
+		duration: 600
+	});
+        $(function(){
+                    $('.ver_show').find('li').hover(function(){
+                        $(this).find('.dack').slideDown();
+                        $(this).find('.show_ver1').show(500);
+                    },function(){
+                        $(this).find('.dack').slideUp();
+                        $(this).find('.show_ver1').hide();
+                    })
+        });
+});
+</script>    
+        <style>
+            #containter{background:url("images/case_bg.png") 0 0 repeat-x; margin: 0 auto;}
+            .banner{background:url("images/content-banner.png") repeat-x;}
+            .wrap{background: url("images/boot.png") 0 0 no-repeat;}
+           // .prompt{background: url("images/about_alert.png")0 0 repeat-x;}
+        </style>
+        
+    </head>
+    <body>
+        <div id="containter">
+            <div class="mskeLayBg"></div>
+          <!--头部导航条-->
+          <header>
+              <nav>  
+                <p class="logo"><img src="images/logo.png"/></p>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我</a></li>
+                    <li><a href="case.html">作品展示</a></li>
+                    <li><a href="contact.html">联系我</a></li>
+                </ul>
+              </nav>
+            </header>
+            <!--导航条结束-->
+            
+            
+            <!--banner-->
+            <div class="banner">
+                <p class="wrap">
+                   作品展示
+                </p>
+            </div>
+            <!--banner结束-->
+            
+            <!--main的部分-->
+            <div class="main">
+                
+                <div class="mytest">
+                   <div class="common online">
+                    <p class="common_ch online_chilren">线上作品</p>
+                   </div>
+                    
+                    <div class="featured-area">
+                      <ul> 
+                        <li>
+                            <div class="zhezao"></div>
+                            <p class="biaoti"><a href="http://wcard.jxhknet.com/v-U612048N9DH8" target="_blank">点击进入</a></p>
+                            <img src="images/yu1.png" alt="日月潭养生公寓" title="日月潭养生公寓"/>
+                        </li>
+                        <li>
+                            <div class="zhezao"></div>
+                            <p class="biaoti"><a href="http://wcard.jxhknet.com/v-U6107DD67T" target="_blank">波格城堡黑啤</a></p>
+                            <img src="images/jiu2.png" alt="波格城堡黑啤酒" title="波格城堡黑啤酒"/></a></li>  
+                        <li>
+                            <div class="zhezao"></div>
+                            <p class="biaoti"><a href="http://www.jxhknet.com" target="_blank">宏开网络门户网</a></p>
+                            <img src="images/net3.png" alt="宏开网络门户网站" title="宏开网络门户网站"/></a></li> 
+                        <li>
+                            <div class="zhezao"></div>
+                            <p class="biaoti"><a href="http://www.wechatjxhk.com" target="_blank">宏开微信商城</a></p>
+                            <img src="images/wechat4.png" alt="宏开网络微信商城" title="宏开网络微信商城"/></li>
+                      </ul> 
+                        <script>
+                            $('.featured-area ul').find('li').hover(function(){
+                                var Index=$(this).index();
+                                 $(this).find('.zhezao').show();
+                                 $(this).find('.biaoti').show(600);
+                            },function(){
+                                $(this).find('.zhezao').hide();
+                                $(this).find('.biaoti').hide();
+                            })
+                        </script>
+                    </div>
+                    <!--旋转木马结束-->
+                </div>
+                <!--线上作品结尾-->
+                
+                <!--全景作品开始-->
+                <div class="ver">
+                    <div class="common ver_title">
+                        <p class="common_ch title_content">720全景作品</p>
+                    </div>
+                    <ul class="ver_show">
+                        <li class="hotal">
+                        <div class="dack"></div>
+                        <p class="show_ver1"><a href="http://www.720qj.com/s1/a.aspx?id=134" target="_blank">点击查看全景一</a></p>
+                            <img src="images/ver1.png"/>
+                        </li> 
+                        <li class="school">
+                            <div class="dack"></div>
+                            <p class="show_ver1"><a href="http://www.720qj.com/s1/a.aspx?id=75" target="_blank">点击查看全景二</a></p>
+                            <img src="images/ver2.png"/>
+                        </li>
+                    </ul>
+                </div>
+                <!--全景作品结束-->
+                
+                <!--概念作品开始-->
+                <div class="gainan">
+                    <div class="common g_title">
+                        <p class="common_ch g_content">概念作品</p>
+                    </div>
+                     <ul class=" ver_show">
+                        <li class="hotal">
+                        <div class="dack"></div>
+                        <p class="show_ver1"><a href="web.html">查看详情</a></p>
+                            <img src="images/gainian_2.png"/>
+                        </li> 
+                        <li class="school">
+                            <div class="dack"></div>
+                            <p class="show_ver1"><a href="app.html">查看详情</a></p>
+                            <img src="images/gainian_1.png"/>
+                        </li>
+                    </ul>
+                </div>
+                <!--概念作品结束-->
+                
+                </div>
+            <!--main结束-->
+                
+                <!--原创插图-->
+                <div class="yuanchuan">
+                    <div class="common yu_title">
+                        <p class="common_ch yu_content">原创插图</p>
+                    </div>
+                    <!--最外面的的固定宽度-->
+                    <div class="fuqin">
+                        
+                        <div class="mskelayBox">
+                            <div class="mske_html">
+  
+                            </div>
+                            <img class="mskeClaose" src="images/mke_close.png" width="27" height="27" />
+                        </div>
+                       <!--任意宽度。只是要移动-->
+                        <ul class="son">
+                            <li><img src="images/case/1.jpg" height="220" width="293"/>
+                                <span class="hidden"><img src="images/case/1.jpg" width="693" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/2.jpg" height="220" width="528"/>
+                                 <span class="hidden"><img src="images/case/2.jpg" width="1248" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/3.jpg" height="220" width="177"/>
+                                 <span class="hidden"><img src="images/case/3.jpg" width="419" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/4.jpg" height="220" width="409"/>
+                                 <span class="hidden"><img src="images/case/4.jpg" width="967" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/5.jpg" height="220" width="283"/>
+                                 <span class="hidden"><img src="images/case/5.jpg" width="668" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/6.jpg" height="220" width="326"/>
+                                 <span class="hidden"><img src="images/case/6.jpg" width="771" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/7.jpg" height="220" width="326"/>
+                                 <span class="hidden"><img src="images/case/7.jpg" width="771" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/8.jpg" height="220" width="318"/>
+                                 <span class="hidden"><img src="images/case/8.jpg" width="752" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/9.jpg" height="220" width="389"/>
+                                 <span class="hidden"><img src="images/case/9.jpg" width="919" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/10.jpg" height="220" width="389"/>
+                                 <span class="hidden"><img src="images/case/10.jpg" width="919" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/11.jpg" height="220" width="311"/>
+                                 <span class="hidden"><img src="images/case/11.jpg" width="736" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/12.jpg" height="220" width="336"/>
+                                 <span class="hidden"><img src="images/case/12.jpg" width="795" height="530" /></span>
+                            </li>
+                            <li><img src="images/case/13.jpg" height="220" width="185"/>
+                                 <span class="hidden"><img src="images/case/13.jpg" width="437" height="530" /></span>
+                            </li>
+                        </ul>
+                       <div class="mskeTogBtn"></div>
+                       <!--绝对定位的子集结束-->
+                    </div>   
+                    <!---最外面的而已-->
+                    
+                    <!--拖拽效果-->
+                    <div class="drag">
+                        <div class="grager"></div>
+                    </div>
+                    <!--拖拽结束-->
+                 
+                </div>
+                <!--原创结束-->
+                <script>
+                    
+                </script>
+                
+                
+                <!--待续提示-->
+                     <div class="common whiat_title">
+                        <p class="common_ch whiat_content">未完待续</p>
+                    </div>
+                <!--待续结束-->
+                
+            
+            
+            <!--footer部分-->
+            <footer>
+                <div class="last">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li>|</li>
+                        <li><a href="about.html">关于我</a></li>
+                        <li>|</li>
+                        <li><a href="case.html">作品展示</a></li>
+                        <li> |</li>
+                        <li><a href="contact.html">联系我</a></li>
+                    </ul>
+                    
+                    <div class="float_two">
+                    <ol>
+                        <li>版权&COPY;所有权：傅超zero个人网站</li>
+                       <li>QQ：1741108471&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机：15779686386（吉安号）</li>
+                       <li>邮箱：760968106@qq.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网址:www.zerofc.com(个人博客)</li>
+                    </ol>
+                        <p class="code"><img src="images/code.jpg"/></p>
+                   </div>
+                    
+                </div>
+                <!--last-->
+            </footer>
+            <!--footer结束-->
+          <audio autoplay="true" controls="true" src="audio/mamadehua.mp3"/>     
+        </div>
+        <!--containter结束-->
+    </body>
+</html>

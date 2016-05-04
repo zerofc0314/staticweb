@@ -1,0 +1,356 @@
+@charset"utf-8";
+ div,header,nav,p,h1,h2,h3,h4,h5,h6,section,ul,ol,dl,li,dt,dd,figure,figcaption,hgroup{
+    padding: 0px;
+    margin: 0px;
+}
+li{
+    list-style-type:none;
+}
+a{
+    text-decoration: none;
+}
+audio{
+    opacity:0.6;
+    width:45px;
+    cursor: pointer;
+    height:60px;
+    position: fixed;
+    left:30px;
+    top:50px;
+}
+#containter{
+    width: 100%;
+    height: 2750px;
+    margin: 0 auto;
+}
+header{
+    width:100%;
+    height:65px;
+    line-height:80px;
+    background:white;
+    border-bottom: gray 1px solid;
+    box-shadow: -1px 2px 8px 1px gray;
+}
+#containter header nav{
+    width:1280px;
+    height:65px;
+    margin:0 auto;  
+  
+}
+.logo{
+    float:left;
+    height:65px;
+    margin-left:50px;
+}
+#containter header nav ul{
+    float:right;
+    height:65px;
+    //border: red 1px solid;
+    width:45%;
+}
+#containter header nav ul>li{
+   // float:left;
+   display:inline-block;
+    margin-left:5px;
+}
+#containter header nav ul>li>a{
+    display:block;
+    text-align: center;
+    line-height:65px;
+    width:120px;
+    height:58px;
+    color: black;
+   // border: green solid 1px;
+}
+#containter header nav ul>li>a:hover{
+    background:  #ff6666;
+    color: white;
+}
+
+
+/*banner条样式*/
+.banner{
+    width:100%;
+    height:529px;
+    position: relative;
+}
+.wrap{
+    width:249px;
+    position:absolute;
+    top:35%;
+    left:44%;
+    padding-left:97px;
+    height:153px;
+    letter-spacing:3px;
+    font:20px/90px 黑体;
+    color: #999999;
+    cursor: pointer;
+}
+.wrap:hover{
+    color:white;
+}
+/*公共部分的样式结束*/
+
+/*mian部分*/
+.main{
+    width:1280px;
+    margin:0 auto;
+}
+.common{
+    width:140px;
+    height:45px;
+    border-radius: 35px;
+    padding:4px 0px;
+    margin:0 auto;
+}
+.online{
+    border: #ff9933 1px solid;
+    margin-bottom: 25px;
+}
+.common_ch{
+    width: 130px;
+    height:45px;
+    margin:0px auto;
+    text-align: center;
+    border-radius:25px;
+    color: white;
+    line-height:45px;
+}
+.online_chilren{ 
+    background: #ff9933;
+}
+.mytest{
+    width:100%;
+    height:440px;
+    margin-top:45px;
+}
+.featured-area ul li{
+    position:relative;
+}
+.zhezao{
+    width:100%;
+    height:100%;
+    background: black;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity: 0.7;
+    display: none;
+}
+.biaoti{
+    position:absolute;
+    top:45%;
+    left:35%;
+    font-size:30px;
+    z-index: 9999;
+    display:none;
+}
+.biaoti a{
+    color:white;
+}
+/**线上作品结束*/
+
+/*全景作品开始*/
+.ver{
+    width:100%;
+    height:350px;
+    margin-top:20px;
+}
+.ver_title{
+    border: #ff6666 1px solid;
+    margin-bottom: 25px;  
+}
+.title_content{
+    background: #ff6666;
+    border-radius:25px;
+}
+.ver_show{
+    width:1070px;
+    margin:0 auto;
+    height:260px;
+}
+.hotal{
+    float:left;
+    width:520px;
+    height:260px;
+    position:relative;
+}
+.school{
+    float:right;
+    width:520px;
+    height:260px;
+    position:relative;
+}
+.dack{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background:black;
+    opacity:0.7;
+    display:none;
+}
+.show_ver1{
+    z-index:9999;
+    position:absolute;
+    top:46%;
+    left:36%;
+    font-size:25px;
+    display:none;
+}
+.show_ver1>a{
+    color: white;
+}
+/*全景结束*/
+
+/*原创开始*/
+.yuanchuan{
+    width:100%;
+    height:400px;
+    margin-top:70px;
+}
+.zhongjian{
+    width:1280px;
+    height:100%;
+    margin:0 auto;
+}
+.yu_title{
+    border:#ff33cc 1px solid;
+    margin-bottom: 25px;
+}
+.yu_content{
+    background: #ff33cc;
+}
+.fuqin{
+    position: relative;
+    width:1200px;
+    margin:0 auto;
+    height:220px;
+    overflow: hidden;
+    border-left:#333333 2px solid;
+    border-right:#333333 2px solid;
+    box-shadow: 1px 3px 20px black;
+   // border: #00ff66 1px solid;
+  
+}
+.son{
+    height: 220px;
+    width:5850px;
+    position:absolute;
+    top:0px;
+    left:2px;
+   
+}
+.son li{
+    float:left;
+    cursor: pointer;
+    margin-right:10px;
+}
+.drag{
+    width:1245px;
+    height:30px;
+    background:  url('../images/conntent-drag.png') 0 0 no-repeat;
+    margin:0 auto;
+    margin-top:30px;
+    position: relative;
+}
+.grager{
+    height:30px;
+    background:url('../images/drag-button.png') 0 0 no-repeat;
+    width:68px;
+    position: absolute;
+    top:0px;
+    left:10px;
+    cursor: pointer;
+}
+.grager:hover{
+     background:url('../images/drag-button1.png') 0 0 no-repeat;
+}
+
+.hidden{display:none}
+.mskeLayBg { background: #000; width: 100%; position: absolute; left: 0px; top: 0px; z-index: 10; opacity: 0.7; filter: alpha(opacity=70); display: none; _display:none!important }
+.mskelayBox { height: 530px; margin-top: -251px; margin-left: -494px; position: fixed; left: 42%; top: 50%; border: 7px solid #FFF; z-index: 20; background: #FFF; display: none; _display:none!important }
+.mskeClaose { position: absolute; top: -17px; right: -17px; cursor: pointer; }
+/*原创结束*/
+
+/*概念作品开始*/
+.gainan{
+    width:100%;
+    height:350px;
+    margin-top:60px;
+}
+.g_title{
+    margin-bottom: 25px;
+    border: #6666ff 1px solid;
+}
+.g_content{
+    background:#6666ff; 
+}
+/*概念作品结束*/
+
+/*待续*/
+.whiat_title{
+    margin-top:35px;
+    margin-bottom:60px;
+    border: #33ff33 2px dashed;
+}
+.whiat_content{
+    background: #33ff33;
+}
+
+/*main结束*/
+
+/**公共部分*/
+/*footer*/
+footer{
+	clear: both;
+	width:100%;
+	height:269px;
+	background: #333333;
+	}
+footer .last{
+    width:1280px;
+    height:100%;
+    margin: 0px auto;
+}
+.last>ul{
+    margin: 0 auto;
+    height:50px;
+    width:580px;
+   padding-top:45px;
+   margin-bottom:5px;
+    font:17px 宋体;
+}
+.last>ul>li{
+    float:left;
+    width:68px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.last>ul>li>a{
+    color:black;
+}
+.last>ul>li>a:hover{
+    color:white;
+}
+.float_two{
+    height:160px;
+    width:900px;
+    margin:0px auto;
+    letter-spacing:1px;
+}
+.last ol{
+    margin:0px auto;
+    width:650px;
+    padding-top:20px;
+    font-size: 18px;
+    float: left;
+}
+.last ol li{
+    margin-bottom: 17px;
+}
+.code{
+    float:right;
+}
+

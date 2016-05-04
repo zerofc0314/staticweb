@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>我的主页</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/about.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/timeline.css" />
+        <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/quiz.js"></script>
+        <script src="js/jquery.timelinr-0.9.4.js" type="text/javascript"></script>
+	<script type="text/javascript"> 
+		$(function(){
+			$().timelinr();
+		});
+	</script>
+        <style>
+            #containter{background:url("images/about-bg.png") 0 0 repeat-x; margin: 0 auto;}
+            .banner{background:url("images/about-banner.png") repeat-x;}
+            .wrap{background: url("images/boot.png") 0 0 no-repeat;}
+           
+        </style>
+        <script>
+            var init={'questions':[{'question':'我到底叫什么呢？','answers':['傅超','傅红雪','付超','傅雷'],'correctAnswer':1},{'question':'我的英文名字是什么?','answers':['Garo','FuChao','Zero','Why'],'correctAnswer':3},{'question':'大学时期我的外号是：','answers':['毒猫','奥特曼','康师傅超人','超人'],'correctAnswer':3},{'question':'我最喜欢的运动是什么？','answers':['足球','篮球','乒乓球','羽毛球'],'correctAnswer':2}]};
+
+                    $(function(){
+                    $('#quiz-container').jquizzy({
+                     questions: init.questions
+                     });
+                    });
+            $(function(){
+                var span = $('.num1');
+                var now = 0;
+                var timeId = null;
+                var progress = $('.ps_progress');
+                var wrapWidth = $('.photoshop').width();
+                timeId = setInterval(function(){
+                        now+=2;
+                        if(now==98){
+                                clearInterval(timeId);
+                        }
+                        span.text(now+'%');
+                        progress.width(now/100*wrapWidth);
+                },110);
+                });
+                
+                $(function(){
+                var now = 0;
+                var time = null;
+                time = setInterval(function(){
+                        now+=1;
+                        if(now==85){
+                                clearInterval(time);
+                        }
+                        $('.num2').text(now+'%');
+                        $('.fw_progress').width(now/100*($('.fwl').width()));
+                },80);
+                })
+              $(function(){
+                var now = 0;
+                var tim = null;
+                tim = setInterval(function(){
+                        now+=1;
+                        if(now==85){
+                                clearInterval(tim);
+                        }
+                        $('.num3').text(now+'%');
+                        $('.ai_progress').width(now/100*($('.aicdr').width()));
+                },90);
+                })
+                
+                $(function(){
+                var now = 0;
+                var ti = null;
+                ti = setInterval(function(){
+                        now+=1;
+                        if(now==65){
+                                clearInterval(ti);
+                        }
+                        $('.num4').text(now+'%');
+                        $('.html_progress').width(now/100*($('.html').width()));
+                },95);
+                })
+                
+                $(function(){
+                var now = 0;
+                var t = null;
+                t = setInterval(function(){
+                        now+=1;
+                        if(now==90){
+                                clearInterval(t);
+                        }
+                        $('.num5').text(now+'%');
+                        $('.jquery_progress').width(now/100*($('.jquery').width()));
+                },98);
+                })
+                
+                  $(function(){
+                var now = 0;
+                var shijian = null;
+                shijian = setInterval(function(){
+                        now+=1;
+                        if(now==80){
+                                clearInterval(shijian);
+                        }
+                        $('.num6').text(now+'%');
+                        $('.javascript_progress').width(now/100*($('.javascript').width()));
+                },100);
+                })
+                
+                $(function(){
+                var now = 0;
+                var shijia = null;
+                shijia = setInterval(function(){
+                        now+=1;
+                        if(now==95){
+                                clearInterval(shijia);
+                        }
+                        $('.num7').text(now+'%');
+                        $('.div_progress').width(now/100*($('.div').width()));
+                },110);
+                })
+                
+                 $(function(){
+                var now = 0;
+                var shiji= null;
+                shiji = setInterval(function(){
+                        now+=1;
+                        if(now==64){
+                                clearInterval(shiji);
+                        }
+                        $('.num8').text(now+'%');
+                        $('.php_progress').width(now/100*($('.php').width()));
+                },130);
+                })
+               
+         </script>
+    </head>
+    <body>
+        <div id="containter">
+          <!--头部导航条-->
+          <header>
+              <nav>  
+                <p class="logo"><img src="images/logo.png"/></p>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我</a></li>
+                    <li><a href="case.html">作品展示</a></li>
+                    <li><a href="contact.html">联系我</a></li>
+                </ul>
+              </nav>
+            </header>
+            <!--导航条结束-->
+            
+            
+            <!--banner-->
+            <div class="banner">
+                <p class="wrap">
+                   关于我
+                </p>
+            </div>
+            <!--banner结束-->
+            
+            <!--main的部分-->
+            <div class="main">
+                <!--data部分-->
+                <div class="data">
+                    <div class="p_title"><img src="images/about-me.png"/><span>个人数据</span></div>
+                    <div class="zero">
+                        <!--我的照片-->
+                        <div class="z-left">
+                            <img src="images/photo-1.png"/>
+                        </div>
+                        
+                        <!--专业指数的进度条-->
+                        <div class="z-right">
+                            <!--ps-->
+                            <p class="ps"><span class="subject">photoshop</span> <span class="num1">0%</span></p>
+                            <div class="inner photoshop">
+                                <div class="progress ps_progress"></div>
+                            </div>
+                            <!--fw-->
+                            <p class="fw"><span class="subject1">firework、flash</span> <span class="num2">0%</span></p>
+                            <div class="inner fwl">
+                                <div class="progress fw_progress"></div>
+                            </div>
+                            <!--ai-->
+                            <p class="fw"><span class="subject2">ai、cdr</span> <span class="num3">0%</span></p>
+                            <div class="inner aicdr">
+                                <div class="progress ai_progress"></div>
+                            </div>
+                             <!--html5-->
+                            <p class="fw"><span class="subject3">html5、css3</span> <span class="num4">0%</span></p>
+                            <div class="inner html">
+                                <div class="progress html_progress"></div>
+                            </div>
+                            <!--jquer-->
+                            <p class="fw"><span class="subject4">jquery</span> <span class="num5">0%</span></p>
+                            <div class="inner jquery">
+                                <div class="progress jquery_progress"></div>
+                            </div>
+                            <!--javascript-->
+                            <p class="fw"><span class="subject5">javascript</span> <span class="num6">0%</span></p>
+                            <div class="inner javascript">
+                                <div class="progress javascript_progress"></div>
+                            </div>
+                            <!--div+css-->
+                            <p class="fw"><span class="subject6">div+css</span> <span class="num7">0%</span></p>
+                            <div class="inner div">
+                                <div class="progress div_progress"></div>
+                            </div>
+                            <!--php/mysql-->
+                             <p class="fw"><span class="subject7">php</span> <span class="num8">0%</span></p>
+                            <div class="inner php">
+                                <div class="progress php_progress"></div>
+                            </div>
+                        </div>
+                        <!--进度结尾-->
+                    </div>
+                    <!--zero结束-->
+                    
+                    <!--对技能进一步详解-->
+                    <div class="parent_info">
+                        以上的个人技能没有按先后顺序排列，而且是2015年时候的数据。可能你会是16年，17年……看到，可能到时这些都已经扩展加强了，因为我们在成长。（这个网页的布局最好的体验是1920分辨率的电脑，所以如果你用的是笔记本，请把浏览器可视窗口缩小至75%或80%效果最佳，也可以在桌面上把分辨率调至1920.目前正计划制作一个全新响应式的个人动态网站，若上线，我会在QQ，微博上分享。）</div>
+                  
+                   <!--详解结束-->
+                   
+                </div>
+                <!--data结束-->
+                
+                 </div>
+            <!--main结束-->
+            
+                <!--个人项目经历-->
+                <div class="my_app">
+                    <div class="icon">
+                        <img src="images/about-app.png"/>
+                        <span>个人历程</span>
+                    </div>
+                    
+      <div id="container" class="content clearfix">
+	<div id="timeline">
+		<ul id="dates">
+                    <li><a class="datatime" href="#1900">7.10</a></li>
+			<li><a class="datatime" href="#1944">8.5</a></li>
+			<li><a class="datatime" href="#1950">9.24</a></li>
+			<li><a class="datatime" href="#1971">10.10</a></li>
+			<li><a class="datatime" href="#1999">10.21</a></li>
+			<li><a class="datatime" href="#2001">11.1</a></li>
+			<li><a class="datatime" href="#2011">12.5</a></li>
+                        <li><a class="datatime" href="#2011">一</a></li>
+                         <li><a class="datatime" href="#2011">二</a></li>
+                         <li><a class="datatime" href="#2011">三</a></li>
+                          <li><a class="datatime" href="#2011">四</a></li>
+                           <li><a class="datatime" href="#2011">五</a></li>
+                            <li><a class="datatime" href="#2011">六</a></li>
+                             <li><a class="datatime" href="#2011">七</a></li>
+                              <li><a class="datatime" href="#2011">八</a></li>
+                               <li><a class="datatime" href="#2011">九</a></li>
+		</ul>
+		<ul id="issues">
+			<li id="1900">
+				<!--<img src="images/1.png" width="256" height="256" />-->
+				<h1>电脑主机QC</h1>
+				<p>2014年7月到9月这两个月暑假期间，在深圳捷硕电子有限公司担任电脑主机检测----将组装好的各种型号机箱，全部进行硬件检查，包括硬盘，光驱，主板，内存条……</p>
+			</li>
+			<li id="1944">
+				<!--<img src="images/3.png" width="256" height="256" />-->
+				<h1>学校官网</h1>
+				<p>2015年八月份还在学校的时候，学校要对官网进行改版，所有页面的设计和静态模板交由我们班的12个人来制作。我负责首页的静态页面的制作和导航栏-----学生作品的页面设计。后期还有“学生作品”子页面的界面设计。</p>
+			</li>
+			<li id="1950">
+				<!--<img src="images/4.png" width="256" height="256" />-->
+				<h1>微信商城</h1>
+				<p>出来实习的第一个项目，属于二次开发。我主要是对前端模板的修改，替换与本公司相关的源码信息。并协助程序员编写了两套后台模板。一个搭配销售，一个手机端物品详情。</p>
+			</li>
+			<li id="1971">
+				<!--<img src="images/5.png" width="256" height="256" />-->
+				<h1>波格黑啤宣传卡</h1>
+				<p>对南昌呈香实业有限公司的啤酒和葡萄酒进行微信端宣传，使用PS和微信卡在线制作系统进行独立制作。</p>
+			</li>
+			<li id="1999">
+				<!--<img src="images/8.png" width="256" height="256" />-->
+				<h1>宏开门户网</h1>
+				<p>对我公司门户网站进行全新改版，我负责静态页面模板化，使用ThinlCMF进行网站二次开发。在不改变功能的前提下，把该CMS的后台模板全部修改为H-ui框架的模板。后期对前端的产品案例和新闻中心进行分类开发。</p>
+			</li>
+			<li id="2001">
+				<!--<img src="images/9.png" width="256" height="256" />-->
+				<h1>养生公寓宣传卡</h1>
+				<p>按照客户要求以720全景中的五个实景点进行宣传制作，使用动画的形式翻新上次界面的表现形式，以中国风生动表现其景色。</p>
+			</li>
+			<li id="2011">
+				<!--<img src="images/10.png" width="256" height="256" />-->
+				<h1>未完待续</h1>
+				<p>截止2015年，我所接触的项目暂时就这些，期间有一些是辅助工作。（现在你浏览的网站是我通过下班时间制作的，略显粗糙，还望海涵！）[ps:除了前面第一个是2014年，后面的都是2015年]接下来是我的心路感想</p>
+			</li>
+                        
+                        <li id="2011">
+                            <h1>成长心路一</h1>
+                         <p>1.在学photoshop和corelDraw时，我们是广告设计，包装设计，VI/UI设计一起学，期间还有设计概论、平面构成和色彩构成等理论知识。赏析国内外优秀作品集，包括巴洛克，洛可可，苹果，博朗等等的设计风格。目的是让这种风格带动我们，让自己的作品出彩，更具深意。陈幼坚是我们认识的第一个大师</p>
+                        </li>
+                        
+                         <li id="2011">
+                            <h1>我的成长心路二</h1>
+                         <p>2.当我能够操作这两款软件后，我又对Adobe旗下的其他软件有些兴趣，于是开始玩IIIustrator，虽然跟CDR同为是矢量图的制作软件，但相对更加难上手，但是界面又很像PS。后来又接触了Flash，Firework这两款软件，总之，由于都是Adobe旗下的，所以玩熟了PS后，其他的也就很快了。</p>
+                        </li>
+                        
+                        <li id="2011">
+                            <h1>我的成长心路三</h1>
+                         <p>3.但是当我玩美国另一家软件大公司----Autodesk旗下的一款叫做MAYA的软件时，结果是不尽人意。虽然PS也有3D凸起制作的，但是这个完全不同，他是3D建模，感觉要对组织结构要相对一定了解才行啊。还有就是这个软件的功能项实在多啊，所以我到现在只能建一些简单的模型。</p>
+                        </li>
+                        
+                        <li id="2011">
+                            <h1>我的成长心路四</h1>
+                         <p>4.学html时，觉得放一些常用的标签和样式就能把一个简单的页面展现出来很简单。后来又开始学习javascript,有点吃力。因为前面学的只要强行记一下单词就行。而JS要掌握各种数据类型，各种表达式，各种操作符，各种语句，各种函数，各种对象。起初我连变量和常量都不知道。</p>
+                        </li>
+                        
+                        <li id="2011">
+                            <h1>我的成长心路五</h1>
+                         <p>5.学完后这些，我跑出来实习了。而我一出来并没有继续学习关于前端的知识，而是开始学习后端PHP语言，一种开源可以跨平台的弱语言。的确是吃力，因为我连前端都没走稳呢。不过学这语言，我发现像那些数据类型，操作符，数组什么我可以快速学完，原来各种语言间还是有些相通的吗。</p>
+                        </li>
+                        
+                        <li id="2011">
+                            <h1>我的成长心路六</h1>
+                         <p>6.接触PHP，学习完面向对象后，就开始学习PHP的框架----ThinkPHP。虽然我PHP并没有深入去学。感觉框架一用起来，整个MVC编程模式就通了。原来一个网站的初步形成是这样的啊。不过前提是，我在学PHP前学习了环境的部署，因为以前我以为网站都是以html各种链接实现的。</p>
+                        </li>
+                        
+                        <li id="2011">
+                            <h1>我的成长心路七</h1>
+                         <p>7.框架之后，我就开始做一些简单的项目。虽然也是基于ThinkPHP开发的，但是那个已经叫做CMS了。一种叫做内容管理系统的东西，比如 ThinCMF,dedeCMS等都是。我就开始学着怎么在本地Apache上部署或安装他们。这也让我对一个网站的雏形架构有了一定了解，后面也通过项目了解了更深一点。</p>
+                        </li>
+                        
+                         <li id="2011">
+                            <h1>我的成长心路八</h1>
+                         <p>8.后端我初步的学习后，我开始又把重心放到前端，因为我的前端还是停留在JS。经过这番折腾，我终于知道学了东西真的要以框架开始，原生的知识日后再深入学习而已。所以JS库---jQuery.我到这时才接触，后面又慢慢有使用一些JQuer UI、bootstrap、H-ui等一些前端框架。</p>
+                        </li>
+                        <li id="2011">
+                            <h1>我的成长心路九</h1>
+                         <p>9.对框架的了解后，逐步发现这些都有做到响应式。一样同时兼容各种PC端的浏览器和移动端的神奇东西。于是，我现在在学html5和css3。也想尝试响应式的布局你现在正在浏览的页面，这样的话，你就可以使用各种手机看了。（未完待续……）</p>
+                        </li>
+		</ul>
+		<div id="grad_left"></div>
+		<div id="grad_right"></div>
+                <a href="#" id="next">+</a>
+		<a href="#" id="prev">-</a>
+	</div>
+  </div>
+                    
+                  
+                    
+                </div>
+                <!--经历结束-->
+                
+                
+                <!--回答我的问题-->
+                <div class="quesion">
+                    <div class="block">
+                    <!--这是问题回答的一个小图标-->
+                    <div class="qu_icon">
+                        <img src="images/about-video.png"/>你有多了解我
+                    </div>
+                    <!--图标结束-->
+                        
+                    <!--是问题提问的部分-->
+                    <div class="demo">
+		        <div id='quiz-container'>这是问题</div>
+                    </div>
+                    <!--是问题提问的部分-->
+                    
+                </div>
+                <!--问题回答完毕-->
+                
+            
+            <!--footer部分-->
+            <footer>
+                <div class="last">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li>|</li>
+                        <li><a href="about.html">关于我</a></li>
+                        <li>|</li>
+                        <li><a href="case.html">作品展示</a></li>
+                        <li> |</li>
+                        <li><a href="contact.html">联系我</a></li>
+                    </ul>
+                    
+                    <div class="float_two">
+                    <ol>
+                        <li>版权&COPY;所有权：傅超zero个人网站</li>
+                       <li>QQ：1741108471&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机：15779686386（吉安号）</li>
+                       <li>邮箱：760968106@qq.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网址:www.zerofc.com(个人博客)</li>
+                    </ol>
+                        <p class="code"><img src="images/code.jpg"/></p>
+                   </div>
+                    
+                </div>
+                <!--last-->
+            </footer>
+            <!--footer结束-->
+           <audio autoplay="true" controls="true" src="audio/Like You.mp3"/>     
+        </div>
+        <!--containter结束-->
+    </body>
+</html>

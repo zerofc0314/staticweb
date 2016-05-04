@@ -1,0 +1,147 @@
+@charset"utf-8";
+ div,header,nav,p,h1,h2,h3,h4,h5,h6,section,ul,ol,dl,li,dt,dd,figure,figcaption,hgroup{
+    padding: 0px;
+    margin: 0px;
+}
+li{
+    list-style-type:none;
+}
+a{
+    text-decoration: none;
+}
+audio{
+    opacity:0.6;
+    width:45px;
+    cursor: pointer;
+    height:60px;
+    position: fixed;
+    left:30px;
+    top:50px;
+}
+#containter{
+    width: 100%;
+    height:4170px;
+    background: #e0e0e0;
+    margin: 0 auto;
+}
+header{
+    width:100%;
+    height:65px;
+    line-height:80px;
+    background:white;
+    border-bottom: gray 1px solid;
+    box-shadow: -1px 2px 8px 1px gray;
+}
+#containter header nav{
+    width:1280px;
+    height:65px;
+    margin:0 auto;  
+  
+}
+.logo{
+    float:left;
+    height:65px;
+    margin-left:50px;
+}
+#containter header nav ul{
+    float:right;
+    height:65px;
+    //border: red 1px solid;
+    width:45%;
+}
+#containter header nav ul>li{
+   // float:left;
+   display:inline-block;
+    margin-left:5px;
+}
+#containter header nav ul>li>a{
+    display:block;
+    text-align: center;
+    line-height:65px;
+    width:120px;
+    height:58px;
+    color: black;
+   // border: green solid 1px;
+}
+#containter header nav ul>li>a:hover{
+    background:  #ff6666;
+    color: white;
+}
+
+.main{
+    height:3671px;
+    width:1280px;
+    margin:0 auto;
+    //border:red 1px solid;
+}
+.daocaoren{
+    width:180px;
+    height:60px;
+    line-height:60px;
+    margin:0px auto;
+    color:white;
+    border-radius:20px;
+    font-size:20px;
+    text-align:center;
+    border:white 1px solid;
+    margin-top:170px;
+    cursor: pointer;
+    font-family: 黑体;
+}
+.daocaoren:hover{
+    background: orangered;
+}
+
+/**公共部分*/
+/*footer*/
+footer{
+	clear: both;
+	width:100%;
+	height:269px;
+	background: #333333;
+	}
+footer .last{
+    width:1280px;
+    height:100%;
+    margin: 0px auto;
+}
+.last>ul{
+    margin: 0 auto;
+    height:50px;
+    width:580px;
+   padding-top:45px;
+   margin-bottom:5px;
+    font:17px 宋体;
+}
+.last>ul>li{
+    float:left;
+    width:68px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.last>ul>li>a{
+    color:black;
+}
+.last>ul>li>a:hover{
+    color:white;
+}
+.float_two{
+    height:160px;
+    width:900px;
+    margin:0px auto;
+    letter-spacing:1px;
+}
+.last ol{
+    margin:0px auto;
+    width:650px;
+    padding-top:20px;
+    font-size: 18px;
+    float: left;
+}
+.last ol li{
+    margin-bottom: 17px;
+}
+.code{
+    float:right;
+}
+
